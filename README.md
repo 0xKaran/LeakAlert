@@ -2,6 +2,8 @@
 
 **LeakAlert** is a cross-browser extension that automatically detects leaked secrets and credentials while browsing. It highlights, alerts, and stores potentially sensitive information to help security researchers, developers, and curious hackers quickly identify accidental exposures.
 
+[Watch the Demo](https://vimeo.com/1063630365)
+
 ---
 
 ## Table of Contents
