@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "LeakAlert",
+    "version": "1.0",
+    "description": "Automatically detects leaked secrets and credentials while browsing by 0xKaran.",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "http://*/*",
+          "https://*/*"
+        ],
+        "js": [
+          "variables.js",
+          "regexPatterns.js",
+          "content.js"
+        ],
+        "run_at": "document_end"
+      }
+    ],
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  
